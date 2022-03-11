@@ -1,0 +1,16 @@
+.jobs {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 80%;
+}
+
+.jobs li {
+  position: relative;
+  cursor: pointer;
+}
+
+#createButton {
+  width: 9.5%;
+  margin: 2px 15px 5px 25px;
+}

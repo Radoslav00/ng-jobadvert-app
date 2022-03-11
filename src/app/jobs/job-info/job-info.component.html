@@ -1,0 +1,21 @@
+<div class="jobItem" xmlns="http://www.w3.org/1999/html">
+  <h2>{{job.title}}</h2>
+  <hr>
+  <div class="info">
+    <h3>Information:</h3>
+    <p>{{job.info}}</p>
+  </div>
+
+  <div class="type">
+    <p>Job type: {{job.type}} <br/>Job category: {{job.category}}</p>
+  </div>
+
+  <div class="likes">
+    <p>Likes: {{job.likes}}</p>
+    <div class="butContainer">
+      <button class="buttons infoButton" type="button" (click)="editClicked()">edit</button>
+<!--      <button class="buttons infoButton" type="button" (click)="deleteClicked()">delete</button>-->
+      <button class="buttons infoButton" id="backButton" (click)="backClicked()">Back</button>
+    </div>
+  </div>
+</div>

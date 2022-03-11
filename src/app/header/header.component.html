@@ -1,0 +1,21 @@
+<nav>
+  <ul>
+    <li *ngIf="!isUserLoggedIn()">
+      <a routerLink="/login" class="buttons">Login</a>
+    </li>
+    <li *ngIf="!isUserLoggedIn()">
+      <a routerLink="/register" class="buttons">Register</a>
+    </li>
+    <li >
+      <a routerLink="/home/jobs" class="buttons">Jobs</a>
+    </li>
+    <li *ngIf="isUserLoggedIn()==='User'">
+      <a routerLink="/jobs/applied/{{getUserId()}}" class="buttons">Applied jobs</a>
+    </li>
+  </ul>
+  <div id="navRightContent">
+    <h4 *ngIf="isUserLoggedIn()" id="userName">Hello {{getLoggedUserName()}}</h4>
+    <button  *ngIf="isUserLoggedIn()" type="button" (click)="editUser()" class="buttons navLogOutButton">Settings</button>
+    <button  *ngIf="isUserLoggedIn()" type="button" (click)="logOut()" class="buttons navLogOutButton">Log out</button>
+  </div>
+</nav>

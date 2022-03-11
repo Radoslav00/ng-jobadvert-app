@@ -1,0 +1,21 @@
+<!--
+<article>
+  <h3>{{job.title}}</h3>
+  <p>{{job.info}}</p>
+  <p>{{job.type}}</p>
+  <p>{{job.category}}</p>
+  <div>
+    <p>likes: {{job.likes ? job.likes : 0}}</p>
+    <button (click)="onJobLiked()">Like</button>
+    <button (click)="onEdit()">Edit</button>
+  </div>
+</article>
+-->
+<li>
+  <a [routerLink]="['/home', 'jobs', 'info', job.id]">
+    {{job.title}} <span id="jobLikes">Liked: {{job.likes}}</span>
+  </a>
+  <button class="likeButton" type="button" (click)="onJobLiked()">like</button>
+  <button class="likeButton" type="button" (click)="onEdit()">edit</button>
+  <button class="likeButton" type="button" (click)="onApply()" id="apply-button">apply</button>
+</li>

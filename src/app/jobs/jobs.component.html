@@ -1,0 +1,18 @@
+
+<!--<section>
+  <div *ngIf="errorMessage">{{errorMessage}}</div>
+  <app-job-item *ngFor="let job of jobs; let i = index" [job]="job"
+                (jobEdit)="onJobEdit($event)"
+                (jobLiked)="onJobLiked($event)"></app-job-item>
+</section>-->
+
+<ul class="jobs">
+
+  <app-job-item *ngFor="let job of jobs" [job]="job"
+                (jobEdit)="onJobEdit($event)"
+                (jobLiked)="onJobLiked($event)"
+                (jobApplied)="onJobApplied($event)"></app-job-item>
+
+</ul>
+<button type="button" (click)="onCreateButtonClicked()" class="buttons" id="createButton">Create new job</button>
+

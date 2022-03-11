@@ -1,0 +1,39 @@
+<div class="login-register-form">
+  <h3>Login</h3>
+  <hr>
+  <form [formGroup]="formGroup">
+    <div class="ic">
+      <label for="email" class="c-label">Email</label>
+      <input type="email" id="email" formControlName="email">
+      <small *ngIf="emailFormControl?.touched && emailFormControl?.invalid && emailFormControl?.errors?.['required']" class="c-validation">
+        This field is required!
+      </small>
+      <small *ngIf="emailFormControl?.touched && emailFormControl?.invalid && emailFormControl?.hasError('minlength')" class="c-validation">
+        This field should containt minimum of {{emailFormControl?.errors?.['minlength']?.requiredLength}}
+      </small>
+      <small *ngIf="emailFormControl?.touched && emailFormControl?.invalid && emailFormControl?.hasError('pattern')" class="c-validation">
+        Please enter a valid email address.
+      </small>
+    </div>
+    <div class="ic">
+      <label for="password" class="c-label">Password</label>
+      <input type="password" id="password" formControlName="password">
+      <small
+        *ngIf="passwordFormControl?.touched && passwordFormControl?.invalid && passwordFormControl?.errors?.['required']" class="c-validation">
+        This field is required!
+      </small>
+      <small
+        *ngIf="passwordFormControl?.touched && passwordFormControl?.invalid && passwordFormControl?.hasError('minlength')" class="c-validation">
+        This field should containt minimum of {{passwordFormControl?.errors?.['minlength']?.requiredLength}}
+      </small>
+    </div>
+    <div>
+      <button type="submit" (click)="onSubmit('User')" class="buttons buttons-form">Login</button>
+      <button type="submit" (click)="onSubmit('Organisation')" class="buttons buttons-form">Login as organisation
+      </button>
+    </div>
+    <div *ngIf="errorMessage" class="error-message">
+      {{errorMessage}}
+    </div>
+  </form>
+</div>

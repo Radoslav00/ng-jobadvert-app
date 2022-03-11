@@ -1,0 +1,66 @@
+{
+  "jobs": [
+    {
+      "id": 2,
+      "title": "Second Test",
+      "info": "Second Info",
+      "type": "test25",
+      "category": "test2",
+      "likes": 23,
+      "createdBy": 1,
+      "applied": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "title": "test243245",
+      "info": "test5",
+      "likes": 20,
+      "createdBy": [],
+      "applied": []
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "testU",
+      "email": "test@mail.com",
+      "password": "testpass",
+      "jobsLiked": [
+        2,
+        3,
+        4
+      ],
+      "jobsApplied": [
+        2
+      ]
+    }
+  ],
+  "organisations": [
+    {
+      "id": 1,
+      "name": "testRenam",
+      "email": "testorg@mail.com",
+      "password": "testpass"
+    },
+    {
+      "name": "test",
+      "email": "test2@mail.com",
+      "password": "test",
+      "id": 2
+    },
+    {
+      "name": "admin",
+      "email": "admin",
+      "password": "admin",
+      "id": 3
+    },
+    {
+      "name": "testorgChecked",
+      "email": "testorg@mail.com",
+      "password": "testpass",
+      "id": 4
+    }
+  ]
+}
